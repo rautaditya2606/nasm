@@ -1,0 +1,135 @@
+# ACTUAL OUTPUTS OF ALL NASM LAB PROGRAMS
+# ========================================
+# Tested on: Linux x86_64 system
+# Date: $(date)
+
+## LAB 1 - EXTENDED LAB 1
+# ======================
+
+### lab1a_hello.asm
+# Command: ./lab1a_hello
+# Output:
+Hello World!
+
+### lab1b_gdb.asm  
+# Command: ./lab1b_gdb
+# Output:
+GDB Test
+# Note: Use GDB to debug and see register values
+# GDB Commands:
+#   gdb ./lab1b_gdb
+#   (gdb) break _start
+#   (gdb) run
+#   (gdb) info registers
+
+### lab1c_commands.txt
+# Content: Linux commands documentation for compilation and GDB usage
+
+## LAB 2 - HELLO WORLD VARIATIONS
+# ===============================
+
+### lab2a_user_input.asm
+# Command: ./lab2a_user_input
+# Output:
+Enter your name: [User input required]
+Hello, [user input]
+
+### lab2b_console.asm
+# Command: ./lab2b_console
+# Output:
+Hello World on Console!
+
+## LAB 3 - ARITHMETIC OPERATIONS
+# ==============================
+
+### lab3a_register.asm
+# Command: ./lab3a_register
+# Output: [Has floating point exception - needs fixing]
+# Expected: Should show arithmetic operations
+
+### lab3b_user_input.asm
+# Command: ./lab3b_user_input
+# Output:
+Enter first number: [User input required]
+Enter second number: [User input required]
+Result: [sum of inputs]
+
+### lab3c_gdb_print.asm
+# Command: ./lab3c_gdb_print
+# Output:
+GDB Print Test
+# Note: Use GDB to see register values during execution
+
+### lab3d_console_print.asm
+# Command: ./lab3d_console_print
+# Output:
+10 + 5 = 15
+10 - 5 = 5
+10 * 5 = 50
+50 / 5 = 10
+
+## LAB 4 - ARRAY ADDITION
+# ======================
+
+### lab4a_array_simple.asm
+# Command: ./lab4a_array_simple
+# Output:
+Sum:6
+# Note: Array [1,2,3] = 1+2+3 = 6
+
+### lab4b_array_aaa.asm
+# Command: ./lab4b_array_aaa
+# Output:
+Sum24
+# Note: Array [7,8,9] = 7+8+9 = 24 (with carry handling)
+
+## COMPILATION AND EXECUTION COMMANDS
+# ===================================
+
+# Compile all programs:
+./compile_all.sh
+
+# Run individual programs:
+./lab1a_hello
+./lab2a_user_input
+./lab3a_register
+./lab4a_array_simple
+
+# GDB debugging:
+gdb ./lab1b_gdb
+(gdb) break _start
+(gdb) run
+(gdb) info registers
+(gdb) step
+(gdb) quit
+
+## PROGRAM DESCRIPTIONS
+# ====================
+
+# lab1a_hello.asm: Basic "Hello World" program
+# lab1b_gdb.asm: GDB debugging example with breakpoints
+# lab1c_commands.txt: Linux commands reference
+# lab2a_user_input.asm: Interactive user input program
+# lab2b_console.asm: Console output program
+# lab3a_register.asm: Arithmetic with hardcoded register values (needs fix)
+# lab3b_user_input.asm: Arithmetic with user input
+# lab3c_gdb_print.asm: GDB debugging for arithmetic
+# lab3d_console_print.asm: Console output for arithmetic
+# lab4a_array_simple.asm: Simple array addition (sum < 10)
+# lab4b_array_aaa.asm: Array addition with carry handling
+
+## SYSTEM REQUIREMENTS
+# ===================
+# - Linux x86_64 system
+# - NASM assembler
+# - GNU linker (ld)
+# - GDB debugger (optional)
+
+## NOTES
+# ======
+# - Some programs require user input
+# - lab3a_register.asm has a floating point exception (division by zero)
+# - Array programs work correctly
+# - All programs compile successfully
+# - GDB programs are ready for debugging
+
